@@ -11,18 +11,43 @@ def encode(password):
             total += '2'
     return total
 
-def decode(password):
-    total = ''
-    for item in str(password):
-        if int(item) > 2:
-            total += (str(int(item) - 3))
-        if item == '0':
-            total += '7'
-        elif item == '1':
-            total += '8'
-        elif item == '2':
-            total += '9'
-    return total
+def decode(code):  ## Darvan Cherichel
+    pass_decode=""
+    
+    for digit in code:
+        
+        if digit == "1":
+            pass_decode+="8"
+        
+        elif digit =="2":
+            pass_decode="9"
+        
+        elif digit=="3":
+            pass_decode+="0"
+            
+        elif digit=="4":
+            pass_decode+="1"
+            
+        elif digit=="5":
+            pass_decode+="2"
+        
+        elif digit=="6":
+            pass_decode+="3"
+        
+        elif digit=="7":
+            pass_decode+="4"
+
+        
+        elif digit=="8":
+            pass_decode+="5"
+        
+        elif digit=="9":
+            pass_decode+="6"
+        
+        elif digit=="0":
+            pass_decode+="7"
+        
+    return pass_decode
 
 if __name__ == '__main__':
 	while True:
